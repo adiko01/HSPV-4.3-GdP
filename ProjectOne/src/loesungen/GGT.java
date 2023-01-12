@@ -1,5 +1,11 @@
 package loesungen;
 
+/**
+ * @author ORR Dr. Tim Wambach
+ * FOLIE 19
+ */
+
+
 public class GGT {
 
 	
