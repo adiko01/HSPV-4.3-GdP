@@ -1,4 +1,4 @@
-package loesungen;
+package wambach.loesungen;
 
 /**
  * @author ORR Dr. Tim Wambach
