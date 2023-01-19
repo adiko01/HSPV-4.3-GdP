@@ -7,6 +7,7 @@ MS I 22/01
 adrianivo.kolar@studium.hspv.nrw.de
 
 
-Projekt | Inhalt
-4-3-1-GdP | Eigene Lösungen von Aufgaben aus dem Modul 
-4-3-1-wambach | Beispiele und Lösungen von ORR Dr. Tim Wambach
+| Projekt | Inhalt |
+|---------|--------|
+| 4-3-1-GdP | Eigene Lösungen von Aufgaben aus dem Modul |
+| 4-3-1-wambach | Beispiele und Lösungen von ORR Dr. Tim Wambach |
