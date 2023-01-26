@@ -1,4 +1,4 @@
-package beispiele;
+package beispiele.DatentypenUndVariablen;
 
 
 public class Einlesen {
