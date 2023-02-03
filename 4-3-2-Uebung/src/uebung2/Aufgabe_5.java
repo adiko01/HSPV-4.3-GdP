@@ -1,3 +1,4 @@
+package uebung2;
 
 public class Aufgabe_5 {
 	
