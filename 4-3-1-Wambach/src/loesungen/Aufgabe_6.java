@@ -1,4 +1,4 @@
-package beispiele.Kontrollstrukturen;
+package loesungen;
 
 
 public class Aufgabe_6 {
