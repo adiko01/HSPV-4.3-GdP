@@ -1,4 +1,4 @@
-package datentypen;
+package aufgaben;
 
 public class Aufgabe_1 {
 	/**

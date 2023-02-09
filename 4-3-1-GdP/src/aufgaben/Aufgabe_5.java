@@ -1,4 +1,4 @@
-package kontrollstrukturen;
+package aufgaben;
 
 public class Aufgabe_5 {
 	/** Aufgabe 5:
