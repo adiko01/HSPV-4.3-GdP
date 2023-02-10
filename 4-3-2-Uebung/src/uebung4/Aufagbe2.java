@@ -12,12 +12,17 @@ public class Aufagbe2 {
 	 */
 	
 	public static void main (String[] args) {
-		System.out.println("Bitte gebe die zuprüfende ganzzahlige Zahl ein: ");
-		int p = new java.util.Scanner(System.in).nextInt();
-		if (isPrime(p)) {
-			System.out.print("Die Zahl " + p + " ist eine Primzahl!");
-		} else {
-			System.out.print("Die Zahl " + p + " ist KEINE Primzahl!");
+		while (true) {
+			System.out.println("Zum Beenden des Programmes gebe -1 ein");
+			System.out.print("Bitte gebe die zuprüfende ganzzahlige Zahl ein: ");
+			int p = new java.util.Scanner(System.in).nextInt();
+			if (p == -1) {
+				break;
+			} else if (isPrime(p)) {
+				System.out.print("Die Zahl " + p + " ist eine Primzahl!");
+			} else {
+				System.out.print("Die Zahl " + p + " ist KEINE Primzahl!");
+			}
 		}
 	}
 	
