@@ -14,7 +14,7 @@ public class Aufgabe_9 {
 	
 	public static void main(String[] args) {
 		System.out.print("Wie viele Zahlen, möchten Sie speichern [int]: ");
-		//Erstele einen Scanner
+		//Erstelle einen Scanner
 		Scanner s1 = new java.util.Scanner(System.in);
 		
 		// i = Anzahl der Felder im Array
@@ -25,29 +25,29 @@ public class Aufgabe_9 {
 		
 		int[] arr = new int[i];
 		
-		// Lese die Eingabe ein
+		//Lese die Eingabe ein
 		for (int p=0;p<i;p++) {
-			//Erstele einen Scanner
+			//Erstelle einen Scanner
 			Scanner s2 = new java.util.Scanner(System.in);
 			
 			System.out.print("Welche Zahl soll gespeichert werden? [int]: ");
-			//Speichere die Eingabe im Arry an der Stelle p
+			//Speichere die Eingabe im Array an der Stelle p
 			arr[p] = s2.nextInt();
 			
-			// Beende den Scanner
+			//Beende den Scanner
 			s2.close();
 		}
 		
-		// Summiere die Felder auf
+		//Summiere die Felder auf
 		int Sum = 0;
 		for (int p=0; p<i; p++) {
 			Sum += arr[p];
 		}
 
-		// Berechen den Mittelwert
+		//Berechne den Mittelwert
 		Double Mid = (double)Sum / i;
 		
-		// Ausgabe des Ergebnisses
+		//Ausgabe des Ergebnisses
 		System.out.println("Die Summe der Zahlen ist " + Sum + " und der Mittelwert ist " + Mid);
 	}
 
