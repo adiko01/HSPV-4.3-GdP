@@ -15,18 +15,17 @@ public class Aufgabe_9 {
 		// i = Anzahl der Felder im Arry
 		int i = new java.util.Scanner(System.in).nextInt();
 		int[] arr = new int[i];
-		i--;
 		
-		for (int p=0;p<=i;p++) {
+		for (int p=0;p<i;p++) {
 			System.out.print("Welche Zahl soll gespeichert werden? [int]: ");
 			//Speichere die Eingabe im Arry an der Stelle p
 			arr[p] =new java.util.Scanner(System.in).nextInt(); 
 		}
 		int Sum = 0;
-		for (int p=0; p<=i; p++) {
+		for (int p=0; p<i; p++) {
 			Sum += arr[p];
 		}
-		i++;
+
 		Double Mid = (double)Sum / i;
 		System.out.println("Die Summe der Zahlen ist " + Sum + " und der Mittelwert ist " + Mid);
 	}
