@@ -113,10 +113,9 @@ public class Aufgabe3 {
 			System.out.print("- - - - - - - - - - \n");
 			printMap(player, enemy, door, money);
 			System.out.print("- - - - - - - - - - \n");
-			//System.out.print("Der Abstand zur Tür: " + player.distance(door) + "\n");
 			
 			//bewegen des Punktes
-			player.setLocation(getMovement(player));
+			getMovement(player);
 			
 			/*
 			 * Überprüfe das finden des Geldes
@@ -135,15 +134,17 @@ public class Aufgabe3 {
 			}
 			// Den Gegenspieler bewegen
 			moveEnemy(enemy);
-		}
-		
-		//Abfangen, das der Spieler die Tür nicht gefunden hat.
-		if (!player.equals(door))	{
-			System.out.println("Sie haben leider verloren.");
-			System.out.println("Die Tür war bei: " + door.toString());
+			
+			/*
+			 * Der Gegenspieler hat die Tür gefunden und das Geld wurde von einem Teilnehmer aufgesammelt
+			 */
+			if (enemy.equals(door) && foundmoney) {
+				System.out.println("Sie haben die Tür gefunden.");
+				break;
+			}
 		}
 	}
-	private static Point getMovement(Point player) {
+	private static void getMovement(Point player) {
 		
 		/*
 		 * Variable für die Bewegung
@@ -168,14 +169,12 @@ public class Aufgabe3 {
 				dX = -1;
 				dY = 0;
 			} else if (c=='r') {
-				//Ein Feld nach Rechts
+				//Ein Feld nach rechts
 				dX = 1;
 				dY = 0;
 			}
 		} while (!isPointReachable(player, dX, dY));
-		Point ret = new Point(player);
-		ret.translate(dX, dY);
-		return ret;
+		player.translate(dX, dY);
 	}
 	
 	private static Boolean isPointReachable (Point pos, int mvX, int mvY) {
