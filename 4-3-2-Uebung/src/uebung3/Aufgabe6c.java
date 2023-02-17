@@ -16,6 +16,7 @@ public class Aufgabe6c {
 	public static void main (String[] args) {
 		//Kleine Start Nachricht
 		System.out.println("UEBUNG 3 - AUFGABE 6c\n\n");
+		System.out.println("Maximal EINE Nachkommastelle");
 		
 		//Abfrage des Startwertes
 		System.out.print("Startwert: ");
@@ -46,7 +47,7 @@ public class Aufgabe6c {
 		}
 		
 		//Ausgabe der Summe
-		System.out.println("Die Summe ist: " + Sum);
+		System.out.println("Die Summe ist: " + (Sum/10.0));
 		
 		//Mittelwertberechnung
 		double Middle = (Sum/10.0) / (double) Count;

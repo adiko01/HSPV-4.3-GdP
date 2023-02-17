@@ -13,7 +13,6 @@ public class Aufgabe5 {
 		for(n=2; n<=5; System.out.print((s*=n++)+" "));
 		System.out.println("\n\n");
 		
-		
 		//Umgebaute While Schleife
 		n=2;
 		s=1;

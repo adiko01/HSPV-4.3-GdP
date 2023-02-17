@@ -31,7 +31,7 @@ public class Aufgabe6b {
 		}
 		
 		//Ausgabe der Summe
-		System.out.println("Die Summe ist: " + Sum);
+		System.out.println("Die Summe ist: " + (Sum/10.0));
 		
 		//Mittelwertberechnung
 		double Middle = (Sum/10.0) / (double) Count;

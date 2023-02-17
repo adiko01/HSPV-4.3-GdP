@@ -10,7 +10,7 @@ public class Aufgabe6a {
 	
 	public static void main (String[] args) {
 		//Zähle in i als Zehnfaches der beabsichtigten Zahl
-		//Zur verhinderung von Rundungsfehlern
+		//Zur Verhinderung von Rundungsfehlern
 		for (int i=500;i>=250;i=i-25) {
 			//Wandle die int in den gedachten double um
 			double n = i / 10.0;
