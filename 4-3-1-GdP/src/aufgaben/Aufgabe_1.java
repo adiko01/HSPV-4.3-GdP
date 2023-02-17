@@ -27,7 +27,7 @@ public class Aufgabe_1 {
 		// Zeilenumbruch
 		System.out.print("\n");
 		
-		// Ausgabe der Zusammenfasung
+		// Ausgabe der Zusammenfassung
 		System.out.println("Also ich fasse einmal zusammen:");
 		System.out.println("Du bist " + name + ", " + alter + " Jahre alt und hast eine Koerpergroesse von " + koerper + " Meter.");
 	}
