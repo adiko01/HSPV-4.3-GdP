@@ -46,7 +46,7 @@ public class GAME {
 			game(player, enemy, door, money, moneyFound, task);
 			
 			System.out.println("In 5 Sekunden wird eine neue Runde gestartet \n"
-					+ "Zum Abbrechen, das Fenster Schließen oder mit Strg + C das Programm beenden.");
+					+ "Zum Abbrechen, das Fenster Schließen, oder mit \033[0;31mStrg \033[0m + \033[0;31m C \033[0m das Programm beenden.");
 			try {
 				Thread.sleep(5000);
 	        } catch (InterruptedException ignored) {
@@ -57,21 +57,23 @@ public class GAME {
 	
 	private static void game(Point player, Point enemy, Point door, Point money, boolean moneyFound, String task) {
 		System.out.print(
-				  "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #\n"
-				+ "#               PointsAndDoors - VERSION 1.3                #\n"
-				+ "#                        SPIELREGELN                        #\n"
-				+ "# Bewege dich mit hilfe der Tasten auf dem 10x10 Spielfeld. #\n"
-				+ "#       Mögliche bewegungen                                 #\n"
-				+ "#        u      hoch                                        #\n"
-				+ "#        d      runter                                      #\n"
-				+ "#        r      rechts                                      #\n"
-				+ "#        l      links                                       #\n"
-				+ "#                                                           #\n"
-				+ "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #\n"
+				  "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #\n"
+				+ "#                 PointsAndDoors - VERSION 1.3                  #\n"
+				+ "#                          SPIELREGELN                          #\n"
+				+ "#   Bewege dich mit hilfe der Tasten auf dem 10x10 Spielfeld.   #\n"
+				+ "#         Mögliche bewegungen                                   #\n"
+				+ "#          u      hoch                                          #\n"
+				+ "#          d      runter                                        #\n"
+				+ "#          r      rechts                                        #\n"
+				+ "#          l      links                                         #\n"
+				+ "#                                                               #\n"
+				+ "#   Das Spiel kann abgebrochen werden mit der Eingabe von \033[0;31mexit\033[0m  #\n"
+				+ "#                                                               #\n"
+				+ "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #\n"
 				);
 		Boolean end = false;
 		do {
-			printMap(player, enemy, door, money, task);
+			printMap(player, enemy, door, money, task, moneyFound);
 			
 			
 			/*
@@ -80,14 +82,26 @@ public class GAME {
 			Scanner s = new Scanner(System.in);
 			
 			do {
+				//Bewegungsdelta in die Richtungen
 				int dX = -100;
 				int dY = -100;
+				char c = 'K';
 				
 				System.out.print("Bewegung [u,d,l,r]: ");
-								
-				//char c = new Scanner(System.in).next().charAt(0);
-				char c = s.next().charAt(0);
-		
+				
+				
+				String l = s.nextLine().toLowerCase();
+				if (l.equals("exit")) {
+					try {
+						System.out.println("\033[0;34m Das Spiel wird beendet! \033[0m");
+						Thread.sleep(1500);
+			        } catch (InterruptedException ignored) {
+			        }
+					System.exit(0);
+				} else {
+					c = l.charAt(0);
+				}
+				
 				if (c=='u') {
 					// Ein Feld nach oben
 					dX = 0;
@@ -213,7 +227,7 @@ public class GAME {
 		return true;
 	}
 	
-	private static void printMap(Point player, Point enemy, Point door, Point money, String task) {
+	private static void printMap(Point player, Point enemy, Point door, Point money, String task, boolean moneyFound) {
 		/*
 		 * Drucke die Karte in die Konsole
 		 */
@@ -229,10 +243,12 @@ public class GAME {
 					System.out.print("P");
 				} else if (enemy.x == l && enemy.y==r) {
 					System.out.print("G");
-				} else if (door.x == l && door.y==r) {
+				} else if (door.x == l && door.y==r && moneyFound) {
+					System.out.print("\033[0;33mD\033[0m");
+				} else if (door.x == l && door.y==r && !moneyFound) {
 					System.out.print("D");
 				} else if (money.x == l && money.y==r) {
-					System.out.print("$");
+					System.out.print("\033[0;33m$\033[0m");
 				} else {
 					System.out.print("x");
 				}
@@ -255,6 +271,9 @@ public class GAME {
  *  * Fehlermeldung bei ungültigen Eingaben wird ausgegeben
  *  * Fehlermeldung beim ansteueren eines Punktes außerhalb des Spielfeldes wird ausgegeben
  *  * Zwischen dem Beenden des alten und dem Starten des neuen Spieles wird 5 Sekunden gewartet.
+ *  * Anweisungen des Spielers werden jetzt mit nextLine() eingelesen
+ *  * Das Spiel kann jetzt mit exit beendet werden
+ *  * Auf der Karte wird das aktuelle Aufgabenziel Gelb eingefärbt
  *  Version 1.2 - 2023-02-22:
  *  * Kleiner Schreibfehler berichtigt
  *  * Das Spiel startet nach dem beenden einer Runde jetzt eine neue Runde
