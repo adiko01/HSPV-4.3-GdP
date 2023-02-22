@@ -50,7 +50,7 @@ public class GAME {
 	private static void game(Point player, Point enemy, Point door, Point money, boolean moneyFound, String task) {
 		System.out.print(
 				  "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #\n"
-				+ "#              Punkte und Türen - VERSION 1.0               #\n"
+				+ "#               PointsAndDoors - VERSION 1.1                #\n"
 				+ "#                        SPIELREGELN                        #\n"
 				+ "# Bewege dich mit hilfe der Tasten auf dem 10x10 Spielfeld. #\n"
 				+ "#       Mögliche bewegungen                                 #\n"
