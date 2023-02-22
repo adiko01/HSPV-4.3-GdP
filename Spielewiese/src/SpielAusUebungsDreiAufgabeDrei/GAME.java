@@ -40,17 +40,17 @@ public class GAME {
 			/*
 			 * Die Aufgabe
 			 */
-			String task = "Sammel das Gelsdtück auf!";
+			String task = "Sammel das Geldstück auf!";
 			
+			//Stertet das Spiel
 			game(player, enemy, door, money, moneyFound, task);
-			break;
 		}
 	}
 	
 	private static void game(Point player, Point enemy, Point door, Point money, boolean moneyFound, String task) {
 		System.out.print(
 				  "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #\n"
-				+ "#               PointsAndDoors - VERSION 1.1                #\n"
+				+ "#               PointsAndDoors - VERSION 1.2                #\n"
 				+ "#                        SPIELREGELN                        #\n"
 				+ "# Bewege dich mit hilfe der Tasten auf dem 10x10 Spielfeld. #\n"
 				+ "#       Mögliche bewegungen                                 #\n"
@@ -61,8 +61,8 @@ public class GAME {
 				+ "#                                                           #\n"
 				+ "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #\n"
 				);
-
-		while (true) {
+		Boolean end = false;
+		do {
 			printMap(player, enemy, door, money, task);
 			
 			
@@ -164,7 +164,7 @@ public class GAME {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-				break;
+				end = true;
 			} else if (player.equals(door)) {
 				System.out.println("Du musst erst das Geld aufsammeln um durch die Tür zu gehen!");
 			} else if (enemy.equals(money)) {
@@ -178,9 +178,9 @@ public class GAME {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-				break;
+				end = true;
 			}
-		}
+		} while (!end)
 		
 	}
 	
@@ -234,4 +234,13 @@ public class GAME {
 			System.out.print("\n");
 		}
 	}
+/** GAME Changelog
+ *  Version 1.2 - 2023-02-22:
+ *  * Kleiner Schreibfehler berichtigt
+ *  * Das Spiel startet nach dem beenden einer Runde jetzt eine neue Runde
+ *  Version 1.1 - 2023-02-22:
+ *  * Spiel in PointsAndDoors umbenannt
+ *  Version 1.0 - 2023-02-22:
+ *  * Spiel Erstellt
+ */
 }
