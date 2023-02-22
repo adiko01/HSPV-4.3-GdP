@@ -42,15 +42,23 @@ public class GAME {
 			 */
 			String task = "Sammel das Geldstück auf!";
 			
-			//Stertet das Spiel
+			//Startet das Spiel
 			game(player, enemy, door, money, moneyFound, task);
+			
+			System.out.println("In 5 Sekunden wird eine neue Runde gestartet \n"
+					+ "Zum Abbrechen, das Fenster Schließen oder mit Strg + C das Programm beenden.");
+			try {
+				Thread.sleep(5000);
+	        } catch (InterruptedException ignored) {
+	        }
+			
 		}
 	}
 	
 	private static void game(Point player, Point enemy, Point door, Point money, boolean moneyFound, String task) {
 		System.out.print(
 				  "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #\n"
-				+ "#               PointsAndDoors - VERSION 1.2                #\n"
+				+ "#               PointsAndDoors - VERSION 1.3                #\n"
 				+ "#                        SPIELREGELN                        #\n"
 				+ "# Bewege dich mit hilfe der Tasten auf dem 10x10 Spielfeld. #\n"
 				+ "#       Mögliche bewegungen                                 #\n"
@@ -69,13 +77,17 @@ public class GAME {
 			/*
 			 * Spieler Bewegung
 			 */
+			Scanner s = new Scanner(System.in);
+			
 			do {
-				int dX = 0;
-				int dY = 0;
+				int dX = -100;
+				int dY = -100;
 				
 				System.out.print("Bewegung [u,d,l,r]: ");
-				char c = new Scanner(System.in).next().charAt(0);
-				
+								
+				//char c = new Scanner(System.in).next().charAt(0);
+				char c = s.next().charAt(0);
+		
 				if (c=='u') {
 					// Ein Feld nach oben
 					dX = 0;
@@ -92,12 +104,16 @@ public class GAME {
 					//Ein Feld nach rechts
 					dX = 1;
 					dY = 0;
+				} else {
+					System.out.print("Das war kein Gültiges Zeichen [u,d,l,r]!");
 				}
 				
 				
 				if (isPointReachable(player,dX, dY)) {
 					player.translate(dX, dY);
 					break;
+				} else {
+					System.out.println("Dein gewähltes Ziel liegt außerhalb des Spielfeldes!");
 				}
 				
 			} while(true);
@@ -145,7 +161,7 @@ public class GAME {
 			
 			
 			/*
-			 * Auswerten, ob der Zug ein Ereigniss ausgelößt hat.
+			 * Auswerten, ob der Zug ein Ereignis ausgelößt hat.
 			 * 
 			 * Wenn der Spieler und der Gegner zeitgleich ein Ereignis auslösen,
 			 * dann wird immer das Ereignis zu gunsten des Spielers ausgelößt.
@@ -235,6 +251,10 @@ public class GAME {
 		}
 	}
 /** GAME Changelog
+ *  Version 1.3 - 2023-02-22:
+ *  * Fehlermeldung bei ungültigen Eingaben wird ausgegeben
+ *  * Fehlermeldung beim ansteueren eines Punktes außerhalb des Spielfeldes wird ausgegeben
+ *  * Zwischen dem Beenden des alten und dem Starten des neuen Spieles wird 5 Sekunden gewartet.
  *  Version 1.2 - 2023-02-22:
  *  * Kleiner Schreibfehler berichtigt
  *  * Das Spiel startet nach dem beenden einer Runde jetzt eine neue Runde
