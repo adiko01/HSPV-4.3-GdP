@@ -180,7 +180,7 @@ public class GAME {
 				}
 				end = true;
 			}
-		} while (!end)
+		} while (!end);
 		
 	}
 	
