@@ -58,7 +58,7 @@ public class GAME {
 	private static void game(Point player, Point enemy, Point door, Point money, boolean moneyFound, String task) {
 		System.out.print(
 				  "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #\n"
-				+ "#                 PointsAndDoors - VERSION 1.4                  #\n"
+				+ "#                 PointsAndDoors - VERSION 1.5                  #\n"
 				+ "#                          SPIELREGELN                          #\n"
 				+ "#   Bewege dich mit hilfe der Tasten auf dem 10x10 Spielfeld.   #\n"
 				+ "#         Mögliche bewegungen                                   #\n"
@@ -235,16 +235,16 @@ public class GAME {
 		 */
 		System.out.print(
 				  "- - - - - - - - - - - - - - - - - - - - -\n"
-				+ "AUFGABE: " + task + "\n"
+				+ "\033[0;33mAUFGABE: " + task + " \033[0m\n"
 				+ "- - - - - - - - - - - - - - - - - - - - -\n"
 				);
 		
 		for (int r=1; r<=10; r++) {
 			for (int l=1; l<=10; l++) {
 				if (player.x == l && player.y==r) {
-					System.out.print("P");
+					System.out.print("\033[0;31mP\033[0m");
 				} else if (enemy.x == l && enemy.y==r) {
-					System.out.print("G");
+					System.out.print("\033[0;35mG\033[0m");
 				} else if (door.x == l && door.y==r && moneyFound) {
 					System.out.print("\033[0;33mD\033[0m");
 				} else if (door.x == l && door.y==r && !moneyFound) {
@@ -258,32 +258,40 @@ public class GAME {
 				if(r == 4 && l == 10) {
 					System.out.print("          | x - Freie Felder");
 				} else if(r == 5 && l == 10) {
-					System.out.print("          | P - Position Spieler");
+					System.out.print("          | \033[0;31mP\033[0m - Position Spieler");
 				} else if(r == 6 && l == 10) {
-					System.out.print("          | G - Position Gegenspieler");
-				} else if(r == 7 && l == 10) {
+					System.out.print("          | \033[0;35mG\033[0m - Position Gegenspieler");
+				} else if(r == 7 && l == 10 && !moneyFound) {
+					System.out.print("          | \033[0;33m$\033[0m - Position Geld");
+				} else if(r == 7 && l == 10 && moneyFound) {
 					System.out.print("          | $ - Position Geld");
+				} else if(r == 8 && l == 10 && moneyFound) {
+					System.out.print("          | \033[0;33mD\033[0m - Position der Tür");
+				} else if(r == 8 && l == 10 && !moneyFound) {
+					System.out.print("          | D - Position der Tür");
 				}
 			}
 			System.out.print("\n");
 		}
 	}
 /** GAME Changelog
- * *  Version 1.4 - 2023-02-24:
+ * Version 1.5 - 2023-02-25:
+ * * Kartenposition der Tür und des Gegenspielers wird jetzt besser dargestellt.
+ * Version 1.4 - 2023-02-24:
  * * Bug in der Generierung der Gegenspielerbewegung behoben
- *  Version 1.3 - 2023-02-22:
+ * Version 1.3 - 2023-02-22:
  *  * Fehlermeldung bei ungültigen Eingaben wird ausgegeben
  *  * Fehlermeldung beim ansteueren eines Punktes außerhalb des Spielfeldes wird ausgegeben
  *  * Zwischen dem Beenden des alten und dem Starten des neuen Spieles wird 5 Sekunden gewartet.
  *  * Anweisungen des Spielers werden jetzt mit nextLine() eingelesen
  *  * Das Spiel kann jetzt mit exit beendet werden
  *  * Auf der Karte wird das aktuelle Aufgabenziel Gelb eingefärbt
- *  Version 1.2 - 2023-02-22:
+ * Version 1.2 - 2023-02-22:
  *  * Kleiner Schreibfehler berichtigt
  *  * Das Spiel startet nach dem beenden einer Runde jetzt eine neue Runde
- *  Version 1.1 - 2023-02-22:
+ * Version 1.1 - 2023-02-22:
  *  * Spiel in PointsAndDoors umbenannt
- *  Version 1.0 - 2023-02-22:
+ * Version 1.0 - 2023-02-22:
  *  * Spiel Erstellt
  */
 }
