@@ -58,7 +58,7 @@ public class GAME {
 	private static void game(Point player, Point enemy, Point door, Point money, boolean moneyFound, String task) {
 		System.out.print(
 				  "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #\n"
-				+ "#                 PointsAndDoors - VERSION 1.3                  #\n"
+				+ "#                 PointsAndDoors - VERSION 1.4                  #\n"
 				+ "#                          SPIELREGELN                          #\n"
 				+ "#   Bewege dich mit hilfe der Tasten auf dem 10x10 Spielfeld.   #\n"
 				+ "#         Mögliche bewegungen                                   #\n"
@@ -136,12 +136,14 @@ public class GAME {
 			/*
 			 * Gegenspieler Bewegung
 			 */
-			int pos = (int) (Math.random() * 9 + 1);
+			
 			
 			int dX = 0;
 			int dY = 0;
 			
 			do {
+				int pos = (int) (Math.random() * 9 + 1);
+				
 				if (pos == 1) {
 					dX = 1;
 					dY = 0;
@@ -267,6 +269,8 @@ public class GAME {
 		}
 	}
 /** GAME Changelog
+ * *  Version 1.4 - 2023-02-24:
+ * * Bug in der Generierung der Gegenspielerbewegung behoben
  *  Version 1.3 - 2023-02-22:
  *  * Fehlermeldung bei ungültigen Eingaben wird ausgegeben
  *  * Fehlermeldung beim ansteueren eines Punktes außerhalb des Spielfeldes wird ausgegeben
