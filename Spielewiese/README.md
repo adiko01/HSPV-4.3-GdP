@@ -2,7 +2,7 @@
 
 | Paket | Inhalt | Version |
 |---------|--------|--------|
-| SpielAusUebungsDreiAufgabeDrei | PointsAndDoors aus Übungsaufgabe 3 | 1.4 |
+| SpielAusUebungsDreiAufgabeDrei | PointsAndDoors aus Übungsaufgabe 3 | 1.5 |
 
 
 ##PointsAndDoors
