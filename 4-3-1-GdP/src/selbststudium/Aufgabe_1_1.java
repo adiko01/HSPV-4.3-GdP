@@ -1,9 +1,9 @@
-package uebung5;
+package selbststudium;
 
 import java.util.Scanner;
 
-public class Aufgabe_5 {
-	/**Aufgabe 5
+public class Aufgabe_1_1 {
+	/**Aufgabe 1.1
 	 * Die Cäsar-Verschlüsselung ist ein Verschiebechiffre, d.h. Wörter werden verschlüsselt,
 	 * indem die einzelnen Buchstaben um eine bestimmte Anzahl an Zeichen verschoben wer-
 	 * den. Die Anzahl der Zeichen, die man bei der Verschiebung verwendet, nennt man den
@@ -26,7 +26,7 @@ public class Aufgabe_5 {
 	public static char[] ABC = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 	public static void main (String[] args) {
 		Scanner s = new Scanner(System.in);
-		System.out.print("Übung 5 - Aufgabe 5\n"
+		System.out.print(" Übung 5 - Aufgabe 5\n"
 				+ "Cäsar-Verschlüssellung\n");
 		
 		while (true) {
@@ -42,13 +42,13 @@ public class Aufgabe_5 {
 				String text = s.nextLine();
 				System.out.print("Die Verschiebung [int]: ");
 				int k = s.nextInt();
-				System.out.print("Der verschlüsselte Text lautet: \n" + encrypt(text, k)+ "\n");
+				System.out.print("Der verschlüsselte Text lautet: \n" + encrypt(text, k) + "\n");
 			} else if (task.equals("ent")) {
 				System.out.print("Der zu entschlüsselnde Text: ");
 				String text = s.nextLine();
 				System.out.print("Die Verschiebung [int]: ");
 				int k = s.nextInt();
-				System.out.print("Der entschlüsselte Text lautet: \n" + decrypt(text, k)+ "\n");
+				System.out.print("Der entschlüsselte Text lautet: \n" + decrypt(text, k) + "\n");
 			} else {
 				System.out.println("Das war keine gültuge Auswahl!");
 			}
@@ -90,6 +90,7 @@ public class Aufgabe_5 {
 	 * @return
 	 */
 	public static String decrypt (String text, int k) {
+		//Überarbeite den Text
 		text = text.toLowerCase();
 		
 		//Rückgabe String
