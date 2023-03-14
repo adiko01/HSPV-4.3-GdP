@@ -17,7 +17,7 @@ Setzen Sie das folgende Klassendiagramm in Java-Quellcode um.
  | + abspielen()                 |          |                               |
  | + getTitle()                  |          |                               |
  |                               |          |                               |
- | - - - - - - - - - - - - - - - |			| - - - - - - - - - - - - - - - |
+ | - - - - - - - - - - - - - - - |          | - - - - - - - - - - - - - - - |
  
  Aufgabe 3
  Teilaufgaben a-g siehe Klasse Node
