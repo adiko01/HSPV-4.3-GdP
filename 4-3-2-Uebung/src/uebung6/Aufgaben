@@ -5,14 +5,14 @@ GRÜN und BLAU.
 Aufgabe 2
 Setzen Sie das folgende Klassendiagramm in Java-Quellcode um.
 
- | - - - - - - - - - - - - - - - |			| - - - - - - - - - - - - - - - |	
- |             Film              |			|           Person              |
- | - - - - - - - - - - - - - - - |			| - - - - - - - - - - - - - - - |	
- |                               |			|                               |
- | - title: String               |			| - vorname: String             |
- | - premiere: java.util.Date    |			| - nachname: String            |
+ | - - - - - - - - - - - - - - - |          | - - - - - - - - - - - - - - - |	
+ |             Film              |          |           Person              |
+ | - - - - - - - - - - - - - - - |          | - - - - - - - - - - - - - - - |	
+ |                               |          |                               |
+ | - title: String               |          | - vorname: String             |
+ | - premiere: java.util.Date    |          | - nachname: String            |
  | - regisseur: Person           |          | - geborenAm: java.util.Date   |
- | - - - - - - - - - - - - - - - |			| - - - - - - - - - - - - - - - |	
+ | - - - - - - - - - - - - - - - |          | - - - - - - - - - - - - - - - |	
  |                               |          |                               |
  | + abspielen()                 |          |                               |
  | + getTitle()                  |          |                               |
