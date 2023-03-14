@@ -6,17 +6,17 @@ Aufgabe 2
 Setzen Sie das folgende Klassendiagramm in Java-Quellcode um.
 
  | - - - - - - - - - - - - - - - |			| - - - - - - - - - - - - - - - |	
- |			Film				 |			|			Person				|
+ |             Film              |			|           Person              |
  | - - - - - - - - - - - - - - - |			| - - - - - - - - - - - - - - - |	
- |								 |			|								|
- | - title: String				 |			| - vorname: String				|
- | - premiere: java.util.Date    |			| - nachname: String			|
- | - regisseur: Person			 |			| - geborenAm: java.util.Date	|
+ |                               |			|                               |
+ | - title: String               |			| - vorname: String             |
+ | - premiere: java.util.Date    |			| - nachname: String            |
+ | - regisseur: Person           |          | - geborenAm: java.util.Date   |
  | - - - - - - - - - - - - - - - |			| - - - - - - - - - - - - - - - |	
- |								 |			|								|
- | + abspielen()				 |			|								|
- | + getTitle()					 |			|								|
- |								 |			|								|
+ |                               |          |                               |
+ | + abspielen()                 |          |                               |
+ | + getTitle()                  |          |                               |
+ |                               |          |                               |
  | - - - - - - - - - - - - - - - |			| - - - - - - - - - - - - - - - |
  
  Aufgabe 3
