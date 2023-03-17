@@ -1,7 +1,5 @@
 package uebung6;
 
-import java.lang.StringBuffer;
-
 public class Node {
 	/** Aufgabe 3
 	 * Entwickeln Sie eine Klasse Node, mit der Sie einen binären Baum in Java implementie-
