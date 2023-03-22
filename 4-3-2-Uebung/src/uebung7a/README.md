@@ -17,3 +17,21 @@ Ein Obstlager kann verschiedene Obstsorten (Apfel, Birne, Orange) aufnehmen. Die
 * `abstract String getFarbe()`
 
 Die Klassen `Apfel`, `Birne` und `Orange` sind von `Obst` abgeleitet. Die Klasse `Obstlager` enthält ein Array vom Typ `Obst`. Die Methode `print()` dieser Klasse soll für alle Obstsorten im Lager die Methoden `getName()` und `getFarbe()` aufrufen und das Ergebnis ausgeben.
+
+## Aufgabe 3
+Eine Liste ganzer Zahlen größer oder gleich 0 soll als Interface `IntegerList` implementiert
+werden. Dazu sollen die folgenden abstrakten Methoden verwendet werden:
+
+* `int getLength()`
+	– liefert die Länge der gesamten Liste
+* `void insertLast(int value)`
+	– fügt value am Ende der Liste an
+* `int getFirst()`
+	– liefert das erste Element der Liste
+* `void deleteFirst()`
+	– löscht das erste Element der Liste
+* `boolean search(int value)`
+	– prüft, ob value in der Liste vorkommt.
+
+Implementieren Sie dieses Interface mithilfe eines Arrays in der Klasse `ArrayIntegerList`
+und testen Sie alle Methoden.
