@@ -1,10 +1,12 @@
-Aufgabe 1
-Erstellen Sie einen typsicheren Aufzählungstypen Colors mit den Elementen ROT,
-GRÜN und BLAU.
+# Übung 6
+## Aufgabe 1
+Erstellen Sie einen typsicheren Aufzählungstypen `Colors` mit den Elementen `ROT`,
+`GRÜN` und `BLAU`.
 
-Aufgabe 2
+## Aufgabe 2
 Setzen Sie das folgende Klassendiagramm in Java-Quellcode um.
 
+```
  | - - - - - - - - - - - - - - - |          | - - - - - - - - - - - - - - - |	
  |             Film              |          |           Person              |
  | - - - - - - - - - - - - - - - |          | - - - - - - - - - - - - - - - |	
@@ -18,7 +20,8 @@ Setzen Sie das folgende Klassendiagramm in Java-Quellcode um.
  | + getTitle()                  |          |                               |
  |                               |          |                               |
  | - - - - - - - - - - - - - - - |          | - - - - - - - - - - - - - - - |
+ ```
  
- Aufgabe 3
- Teilaufgaben a-g siehe Klasse Node
- Teilaufgabe h siehe Klasse TestNode
+## Aufgabe 3
+Teilaufgaben a-g siehe Klasse `Node`
+Teilaufgabe h siehe Klasse `TestNode`
