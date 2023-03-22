@@ -1,6 +1,10 @@
 package uebung5;
 
 public class Aufgabe_4 {
+	/* Aktuelle Version dieser Klasse auf:
+	 * https://github.com/adiko01/HSPV-4.3-GdP/blob/master/4-3-2-Uebung/src/uebung5/Aufgabe_4.java
+	 */
+	
 	/** Aufgabe 4
 	 * Entwickeln Sie eine Methode, mit der ein int-Array mit dem BubbleSort-Algorithmus
 	 * sortiert wird.
