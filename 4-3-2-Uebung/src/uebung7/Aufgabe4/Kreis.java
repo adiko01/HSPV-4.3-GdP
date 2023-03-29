@@ -1,4 +1,4 @@
-package uebung7b.Aufgabe1;
+package uebung7.Aufgabe4;
 
 public class Kreis extends Figur{
 

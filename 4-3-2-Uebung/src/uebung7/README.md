@@ -35,3 +35,7 @@ werden. Dazu sollen die folgenden abstrakten Methoden verwendet werden:
 
 Implementieren Sie dieses Interface mithilfe eines Arrays in der Klasse `ArrayIntegerList`
 und testen Sie alle Methoden.
+
+## Aufgabe 4
+Erweitern Sie die Klasse `Figur` aus  Übungsblatt 7a Aufgabe 1 um die Schnittstelle
+`Comparable<Figur>` so dass die Objekte nach Größe der Fläche sortiert werden können.
