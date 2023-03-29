@@ -1,14 +1,14 @@
-package uebung7a.Aufgabe2;
+package uebung7.Aufgabe2;
 
-public class Orange extends Obst{
+public class Birne extends Obst{
 	
 	final String Name;
 	
 	private Colors2 farbe;
 	
-	Orange () {
-		Name = "Orange";
-		farbe = Colors2.ORANGE;
+	Birne () {
+		Name = "Birne";
+		farbe = Colors2.GRÜN;
 	}
 	
 	/** @return Namen der Sorte zurück
@@ -18,7 +18,7 @@ public class Orange extends Obst{
 		return Name;
 	}
 
-	/** @return Farbe des Orange
+	/** @return Farbe des Birne
 	 */
 	@Override
 	String getFarbe() {

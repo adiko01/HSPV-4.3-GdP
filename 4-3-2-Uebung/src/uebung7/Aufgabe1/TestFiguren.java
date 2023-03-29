@@ -1,4 +1,4 @@
-package uebung7a.Aufgabe1;
+package uebung7.Aufgabe1;
 
 public class TestFiguren {
 	public static void main (String[] args) {

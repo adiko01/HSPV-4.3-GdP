@@ -1,4 +1,4 @@
-package uebung7a.Aufgabe3;
+package uebung7.Aufgabe3;
 
 import java.util.ArrayList;
 

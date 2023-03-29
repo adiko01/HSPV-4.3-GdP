@@ -1,4 +1,4 @@
-package uebung7a.Aufgabe2;
+package uebung7.Aufgabe2;
 
 public enum Colors2 {
 	/**

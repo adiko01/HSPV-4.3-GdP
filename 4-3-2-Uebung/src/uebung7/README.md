@@ -1,4 +1,4 @@
-# Übungsblatt 7a
+# Übungsblatt 7
 
 ## Aufgabe 1
 
