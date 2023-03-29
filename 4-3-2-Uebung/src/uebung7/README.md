@@ -39,3 +39,9 @@ und testen Sie alle Methoden.
 ## Aufgabe 4
 Erweitern Sie die Klasse `Figur` aus  Übungsblatt 7a Aufgabe 1 um die Schnittstelle
 `Comparable<Figur>` so dass die Objekte nach Größe der Fläche sortiert werden können.
+
+## Aufgabe 5
+Implementieren Sie das folgende UML-Diagramm. Erstellen Sie außerdem eine Klasse
+HiWi, die das Interface StudHilfskraft implementiert.
+
+![](UML-uebung7-Aufgabe5.jpg)
