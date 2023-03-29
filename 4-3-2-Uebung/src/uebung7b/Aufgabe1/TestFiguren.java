@@ -1,5 +1,7 @@
 package uebung7b.Aufgabe1;
 
+import java.util.ArrayList;
+
 public class TestFiguren {
 	public static void main (String[] args) {
 		System.out.print("Übung 7b Aufgabe \n");
@@ -14,10 +16,11 @@ public class TestFiguren {
 		
 		System.out.print("Vergleiche Kreis und Rechteck von oben\n");
 		
-		if(k.Comparable(r)) {
-			System.out.println("Der Kreis ist größer als das Rechteck!");
-		} else {
-			System.out.println("Der Kreis ist kleiner als das Rechteck!");
-		}
+		ArrayList<Figur> comp = k.compare(r);
+		System.out.print("Wenn beide Figuren gleichgroß sind wird this als größere ausgegeben\n"
+				+ "Größere: ");
+		comp.get(0).zeichne();
+		System.out.print("Kleinere: ");
+		comp.get(1).zeichne();
 	}
 }

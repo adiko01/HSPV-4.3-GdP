@@ -1,6 +1,6 @@
 package uebung7b.Aufgabe1;
 
-public class Rechteck extends Figur{
+public class Rechteck extends Figur {
 	
 	/*
 	 * Länge
