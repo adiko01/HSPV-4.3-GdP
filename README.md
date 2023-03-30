@@ -9,6 +9,6 @@ MS I 22/01
 | Projekt | Inhalt |
 |---------|--------|
 | 4-3-1-GdP | Eigene Lösungen von Aufgaben aus dem Modul |
-| 4-3-1-wambach | Beispiele und Lösungen von ORR Dr. Tim Wambach |
+| 4-3-1-wambach | Beispiele und Lösungen von Prof. Dr. Tim Wambach |
 | 4-3-2-Uebung | Eigene Lösungen zu den Aufgaben aus den Übungen |
 | Spielwiese | Ein Sammelsorium an eigenen Projekten basierend auf den Aufgaben |
