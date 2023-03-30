@@ -42,6 +42,6 @@ Erweitern Sie die Klasse `Figur` aus  Übungsblatt 7a Aufgabe 1 um die Schnittst
 
 ## Aufgabe 5
 Implementieren Sie das folgende UML-Diagramm. Erstellen Sie außerdem eine Klasse
-HiWi, die das Interface StudHilfskraft implementiert.
+`HiWi`, die das Interface `StudHilfskraft` implementiert.
 
 ![](UML-uebung7-Aufgabe5.jpg)
