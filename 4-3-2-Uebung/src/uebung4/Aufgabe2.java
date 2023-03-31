@@ -1,6 +1,6 @@
 package uebung4;
 
-public class Aufagbe2 {
+public class Aufgabe2 {
 	/**Aufgabe 2
 	 * Die Funktion isPrime(p) sei wie folgt rekursiv definiert:
 	 * isPrime(p) := isPrime(p, p − 1)
