@@ -23,13 +23,12 @@ public class Aufgabe2 {
 	 */
 	
 	public static void main (String[] args) {
-		Path path2 = Paths.get("src/uebung8/Uebung8Aufgabe2.txt");
-		System.getProperty("path.separator");
+		Path path = Paths.get("src/uebung8/Uebung8Aufgabe2.txt");
 		
 		ArrayList<String> laengeste = new ArrayList<String>();
 		laengeste.add("");
 		try {
-			List<String> lines = Files.readAllLines(path2);
+			List<String> lines = Files.readAllLines(path);
 			
 			for (String line : lines) {
 				if (laengeste.get(0).length()<line.length()) {
@@ -48,9 +47,6 @@ public class Aufgabe2 {
 					System.out.println(" - " + word);
 				}
 			}
-			
-			
-			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

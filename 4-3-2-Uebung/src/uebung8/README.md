@@ -27,7 +27,7 @@ Schreiben Sie ein Programm, das ermittelt, welches Wort in der Datei das längst
 Welche Ausnahmen müssen Sie dabei berücksichtigen?
 
 ## Aufgabe 3
-Schreiben Sie ein Programm, das analog zu Aufgabe 3 eine Datei ein eine String-Liste
+Schreiben Sie ein Programm, das analog zu Aufgabe 2 eine Datei ein eine String-Liste
 einliest. Die Datei soll aber in diesem Fall pro Zeile eine Zahl beinhalten.
 Konvertieren Sie die eingelesenen Zeilen so, dass die Zahlen in ein Double-Array ein-
 gelesen werden. Achten Sie auf Ausnahmen derart, dass bei fehlerhaften Einträgen das
