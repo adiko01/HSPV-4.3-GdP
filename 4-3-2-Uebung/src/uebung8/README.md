@@ -37,4 +37,4 @@ Zeile auf der Konsole ausgegeben wird.
 **a)** Schreiben Sie eine Klasse `Person`, die die Attribute `vorname`, `nachname` und `alter` umfasst. Sofern ein Objekt dieser Klasse erzeugt wird, soll eine `IllegalArgumentException` ausgelöst werden, falls der Nachname leer ist oder das Alter kleiner als 0 oder größer als 150 gesetzt wird. Testen Sie mit einem entsprechenden Hauptprogramm.
 
 **b)** Erstellen Sie eine eigene Ausnahmeklasse `PersonException` und passen Sie die Klasse
-so an, dass in den oben genannten Fällen eine PersonException ausgelöst wird.
+so an, dass in den oben genannten Fällen eine `PersonException` ausgelöst wird.
