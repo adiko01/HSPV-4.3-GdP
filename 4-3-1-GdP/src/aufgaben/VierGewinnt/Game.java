@@ -37,10 +37,11 @@ public class Game {
 				setXY(slot,i,spielerID);
 				if (currentPlayer==1) {
 					currentPlayer = 2;
+					return 1;
 				} else {
 					currentPlayer = 1;
+					return 2;
 				}
-				break;
 			} else {
 				//Nothing
 			}
@@ -116,6 +117,23 @@ public class Game {
 				for (int i=-3; i<4; i++) {
 					try {
 						if (getXY((x-i),(y-i))==pl) {
+							//Ein Feld von gleicher Farbe gefunden
+							stueck++;
+							if (stueck==4) {
+								return pl;
+							}
+						} else {
+							stueck = 0;
+						}
+					} catch (ArrayIndexOutOfBoundsException e) {
+						continue;
+					}
+				}
+				//Prüfe Diagonale2
+				stueck = 0;
+				for (int i=-3; i<4; i++) {
+					try {
+						if (getXY((x+i),(y-i))==pl) {
 							//Ein Feld von gleicher Farbe gefunden
 							stueck++;
 							if (stueck==4) {
