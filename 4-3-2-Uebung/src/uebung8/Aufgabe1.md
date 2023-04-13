@@ -22,7 +22,9 @@ Geworfen werden für diese Schnipsel:
 Um das "kann" zu beantworten: Ja es ist möglich. Dazu sähe der `catch` so aus
 
 ````
-catch (InterruptedException | IOException | LineUnavailableException | UnsupportedAudioFileException e) {}
+catch (InterruptedException | IOException | LineUnavailableException | UnsupportedAudioFileException e) {
+
+}
 
 ```
 
