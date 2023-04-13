@@ -8,6 +8,8 @@ import java.awt.event.WindowListener;
 
 import javax.swing.JFrame;
 
+import beispiele.GUI.WeitereBeispiele.JSplitPane.JSplitPaneBsp;
+
 
 
 public class Fenster extends JFrame implements KeyListener, WindowListener
