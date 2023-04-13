@@ -5,7 +5,7 @@ import java.util.Map.Entry;
 
 import javax.swing.JOptionPane;
 
-public class Aufgabe24
+public class Aufgabe_24
 {
 
 	public static void main(String[] args)
