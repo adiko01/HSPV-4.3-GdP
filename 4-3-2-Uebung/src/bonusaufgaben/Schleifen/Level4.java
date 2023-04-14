@@ -10,7 +10,7 @@ public class Level4 {
 	 * für die die Fakultät berechnet wird.
 	 */
 	public static void main(String[] args) {
-		System.out.print("Bonusaufgaben - Level 4 \n"
+		System.out.print("Bonusaufgaben - Schleifen  - Level 4 \n"
 				+ "Fakultatät\n"
 				+ "\n");
 		while (true) {

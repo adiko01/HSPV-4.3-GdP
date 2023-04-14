@@ -7,7 +7,7 @@ public class Level9 {
 	 * Testen Sie Ihre Methode, indem Sie den String "Hello World" umkehren und auf der Konsole ausgeben.
 	 */
 	public static void main(String[] args) {
-		System.out.print("Bonusaufgaben - Level 9 \n"
+		System.out.print("Bonusaufgaben - Schleifen - Level 9 \n"
 				+ "Stringumkehr\n"
 				+ "\n");
 		String s = "Hello World";

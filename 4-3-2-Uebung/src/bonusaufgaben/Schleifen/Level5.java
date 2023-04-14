@@ -9,7 +9,7 @@ public class Level5 {
 	 * das die Fibonacci-Zahlen bis zu einer vom Benutzer eingegebenen Zahl ausgibt.
 	 */
 	public static void main(String[] args) {
-		System.out.print("Bonusaufgaben - Level 5 \n"
+		System.out.print("Bonusaufgaben - Schleifen  - Level 5 \n"
 				+ "Fibonacci-Zahlen\n"
 				+ "\n");
 		while (true) {

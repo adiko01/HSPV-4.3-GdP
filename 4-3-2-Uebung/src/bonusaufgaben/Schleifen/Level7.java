@@ -7,7 +7,7 @@ public class Level7 {
 	 * Schreiben Sie danach eine Schleife, die die Primzahlen von 1 bis 100 auf der Konsole ausgibt.
 	 */
 	public static void main(String[] args) {
-		System.out.print("Bonusaufgaben - Level 7 \n"
+		System.out.print("Bonusaufgaben - Schleifen  - Level 7 \n"
 				+ "Priemzahlen\n"
 				+ "\n");
 		for (int i = 1 ; i <=100 ; i++) {

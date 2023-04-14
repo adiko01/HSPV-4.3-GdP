@@ -7,6 +7,9 @@ public class Level8 {
 	 * Testen Sie Ihre Methode, indem Sie die ersten 10 Fibonacci-Zahlen auf der Konsole ausgeben.
 	 */
 	public static void main(String[] args) {
+		System.out.print("Bonusaufgaben - Schleifen  - Level 8 \n"
+				+ "n-te Fibonacci-Zahl\n"
+				+ "\n");
 		for (int i = 1 ; i <= 10 ; i++) {
 			System.out.println(getFibonacci(i));
 		}

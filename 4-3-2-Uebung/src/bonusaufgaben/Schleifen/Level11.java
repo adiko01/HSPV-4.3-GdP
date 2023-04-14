@@ -6,7 +6,7 @@ public class Level11 {
 	 * die zählt, wie viele Vokale in einem gegebenen String str enthalten sind.
 	 */
 	public static void main(String[] args) {
-		System.out.print("Bonusaufgaben - Level 11 \n"
+		System.out.print("Bonusaufgaben - Schleifen  - Level 11 \n"
 				+ "Vokale in String\n"
 				+ "\n");
 		String str = "Baum Haus";
