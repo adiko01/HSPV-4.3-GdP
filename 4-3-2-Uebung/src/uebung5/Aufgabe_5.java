@@ -57,9 +57,9 @@ public class Aufgabe_5 {
 	
 	/**
 	 * Verschlüsselt den Text
-	 * @param text
-	 * @param k
-	 * @return
+	 * @param text - Zu Entschlüsselnder Text
+	 * @param k - Versciebung
+	 * @return Den {@code text} als Entschlüsselt
 	 */
 	public static String encrypt (String text, int k) {
 		text = text.toLowerCase();
