@@ -12,7 +12,8 @@ public class Level10 {
 				+ "Array Summen\n"
 				+ "\n");
 		int[] a = {1,2,3,4,5,6,7,8,9,10};
-		int[][] b = sumOfPairs(a,50);
+		int[][] b = new int[a.length][2];
+		b = sumOfPairs(a,50);
 	}
 	private static int[][] sumOfPairs(int[] arr, int sum) {
 		int[][] ret = new int[arr.length][2];

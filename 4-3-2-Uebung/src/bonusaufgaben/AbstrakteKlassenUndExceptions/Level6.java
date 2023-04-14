@@ -22,7 +22,6 @@ public class Level6 {
 		try {
 			readFile("bla");
 		} catch (NoSuchFileException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

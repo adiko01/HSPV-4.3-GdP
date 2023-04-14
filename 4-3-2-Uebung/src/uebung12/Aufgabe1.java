@@ -12,6 +12,7 @@ import java.awt.event.ActionListener;
 import java.util.Random;
 import java.awt.event.ActionEvent;
 
+@SuppressWarnings("serial")
 public class Aufgabe1 extends JFrame {
 
 	private JPanel contentPane;

@@ -1,7 +1,6 @@
 package uebung11;
 
 import java.awt.EventQueue;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.swing.JFrame;
@@ -10,6 +9,7 @@ import javax.swing.Timer;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 
+@SuppressWarnings("serial")
 public class Aufgabe1 extends JFrame {
 
 	private JPanel contentPane;

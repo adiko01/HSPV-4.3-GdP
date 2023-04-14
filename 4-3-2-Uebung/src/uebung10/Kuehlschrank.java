@@ -21,9 +21,14 @@ public class Kuehlschrank {
      */
     public void fuelle() throws KuehlschrankException {
         Scanner scanner = new Scanner(System.in);
+        
+        //Einlesen des Lebensmittels
         System.out.println("Geben Sie das Lebensmittel ein:");
         String lebensmittel = scanner.nextLine();
+        
+        //Prüfe, ob das Lebensmittel bereits im Kühlschrank ist
         if (kuehlschrankInhalt.containsKey(lebensmittel)) {
+        	//Wenn ja, Hinweise
             System.out.print("Das Lebensmittel ist bereits im Kühlschrank. \n"
             		+ "Der akutelle bestand ist " + kuehlschrankInhalt.get(lebensmittel) + "\n"
             		+ "Neue Gesammtmenge: ");
@@ -32,13 +37,19 @@ public class Kuehlschrank {
         }
         int menge = 0;
         try {
+        	//Lese die Menge ein und versuche diese zu einer Zahl zu Parsen
             menge = Integer.parseInt(scanner.nextLine());
         } catch (NumberFormatException e) {
+        	//Wenn Fehlgeschlagen, dann wurde kein int eingegeben
             throw new KuehlschrankException("Die Menge muss eine ganze Zahl sein.");
         }
+        // Prüfe, ob die Menge negativ ist
         if (menge < 0) {
+        	//Wenn Negativ werfe Fehler
             throw new KuehlschrankException("Die Menge muss größer oder gleich 0 sein.");
         }
+        
+        // Lege das Lebensmittel in den Kühlschrank
         kuehlschrankInhalt.put(lebensmittel, menge);
     }
     

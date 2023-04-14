@@ -17,6 +17,7 @@ public class Aufgabe2a {
 		//Start Zeit
 		long start = System.currentTimeMillis();
 		
+		@SuppressWarnings("unused") //Unterdrückt die Fehlermeldung
 		long sum = 0;
 		for (int i = 1 ; i < Integer.MAX_VALUE ; i++) {
 			sum += i;

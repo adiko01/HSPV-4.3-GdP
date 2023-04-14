@@ -1,8 +1,5 @@
 package bonusaufgaben.Schleifen;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class Level10 {
 	/* Level 10
 	 * Schreiben Sie eine Methode countOccurrences(char c, String s),

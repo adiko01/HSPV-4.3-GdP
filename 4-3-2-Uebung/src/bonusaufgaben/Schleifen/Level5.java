@@ -13,8 +13,7 @@ public class Level5 {
 				+ "Fibonacci-Zahlen\n"
 				+ "\n");
 		while (true) {
-			try {
-				Scanner s = new Scanner(System.in);
+			try (Scanner s = new Scanner(System.in)){
 				System.out.print("Bitte gebe den int ein, bis zu der die Fibonacci-Folge berechnet werden soll: ");
 				int n = s.nextInt();
 				System.out.println("\n Die Fibonacci-Folge bis " + n + " lautet:");

@@ -14,8 +14,7 @@ public class Level4 {
 				+ "Fakultatät\n"
 				+ "\n");
 		while (true) {
-			try {
-				Scanner s = new Scanner(System.in);
+			try (Scanner s = new Scanner(System.in)) {
 				System.out.print("Bitte gebe den int ein, für den die Fakultät berechnet werden soll: ");
 				int n = s.nextInt();
 				System.out.println("\n Die Fakultät von " + n + " ist " + fac(n) + " !");
