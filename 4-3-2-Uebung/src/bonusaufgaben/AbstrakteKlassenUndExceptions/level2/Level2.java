@@ -9,6 +9,9 @@ public class Level2 {
 	 * und die Exception abfängt, falls sie geworfen wird.
 	 */
 	public static void main(String[] args) {
+		System.out.print("Bonusaufgaben - Abstrakte Klassen und Exceptions  - Level 2 \n"
+				+ "\n"
+				+ "\n");
 		try {
 			System.out.println(divide(1,2));
 			System.out.println(divide(1,0));
