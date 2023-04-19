@@ -40,10 +40,14 @@ public class PointsAndDoors {
 		return true;
 	}
 	
+	private void gameLogic () {
+		if (player.equals(money)) {
+			money.move(-1, -1);
+			Task = "Gehe zur Tür";
+		}
+	}
 	
-	
-	/**
-	 * 
+	/** 
 	 * @return ob das Geldstück gefunden wurde
 	 */
 	public boolean moneyFound () {
@@ -74,6 +78,7 @@ public class PointsAndDoors {
 		}
 		if (isPointReachable(player, dX, dY)) {
 			player.translate(dX, dY);
+			gameLogic();
 		}
 	}
 	

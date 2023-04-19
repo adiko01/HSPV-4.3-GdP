@@ -11,9 +11,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
 import javax.swing.JLabel;
+import java.awt.Font;
 
 public class PointsAndDoorsGUI {
-
+	final String title = "PointsAndDoors - Game Version: - GUI: BETA";
 	private JFrame frmPointAndDoors;
 
 	/**
@@ -48,8 +49,8 @@ public class PointsAndDoorsGUI {
 		
 		
 		frmPointAndDoors = new JFrame();
-		frmPointAndDoors.setTitle("PointsAndDoors - Game Version: - GUI:");
-		frmPointAndDoors.setBounds(100, 100, 600, 650);
+		frmPointAndDoors.setTitle(title);
+		frmPointAndDoors.setBounds(100, 100, 580, 650);
 		frmPointAndDoors.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmPointAndDoors.getContentPane().setLayout(null);
 		
@@ -58,22 +59,17 @@ public class PointsAndDoorsGUI {
 				for (int i = 0; i < 100 ; i++ ) {
 					//Erstelle das Panel
 					panels[i] = new JPanel ();
-						
-					//Hintergrundfarbe der Panels
-					if (i == game.getPos(GameObjects.Player)) {
-						panels[i].setBackground(Color.RED);
-					} else {
-						panels[i].setBackground(Color.WHITE);
-					}			
+					
+					panels[i].setBackground(Color.WHITE);		
 					
 					//Rahmen der Panels
 					panels[i].setBorder(BorderFactory.createLineBorder(Color.black));
 						
 					//Position Festlegen
 					//Festlegen der Spalte
-					int x = (i % 10) * 50;
+					int x = ((i % 10) * 50) + 30;
 					//Festlegen der Zeile
-					int y = (i / 10) * 50;
+					int y = ((i / 10) * 50) + 40;
 							
 					//Setze die Maße des Panels
 					panels[i].setBounds(x, y, 50, 50);
@@ -82,11 +78,15 @@ public class PointsAndDoorsGUI {
 					frmPointAndDoors.getContentPane().add(panels[i]);
 				}
 		
+		JLabel lbl_task = new JLabel(game.getTask());
+		lbl_task.setBounds(390, 582, 186, 21);
+		frmPointAndDoors.getContentPane().add(lbl_task);		
+		
 		JButton btn_runter = new JButton("Runter");
 		btn_runter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				game.movePlayer('d');
-				aktualisieren(game, panels);
+				aktualisieren(game, panels, lbl_task);
 			}
 		});
 		btn_runter.setBounds(10, 582, 85, 21);
@@ -96,7 +96,7 @@ public class PointsAndDoorsGUI {
 		btn_rauf.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				game.movePlayer('u');
-				aktualisieren(game, panels);
+				aktualisieren(game, panels, lbl_task);
 			}
 		});
 		btn_rauf.setBounds(105, 582, 85, 21);
@@ -106,7 +106,7 @@ public class PointsAndDoorsGUI {
 		btn_links.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				game.movePlayer('l');
-				aktualisieren(game, panels);
+				aktualisieren(game, panels, lbl_task);
 			}
 		});
 		btn_links.setBounds(200, 582, 85, 21);
@@ -116,26 +116,51 @@ public class PointsAndDoorsGUI {
 		btn_rechts.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				game.movePlayer('r');
-				aktualisieren(game, panels);
+				aktualisieren(game, panels, lbl_task);
 			}
 		});
 		btn_rechts.setBounds(295, 582, 85, 21);
 		frmPointAndDoors.getContentPane().add(btn_rechts);
 		
-		JLabel lbl_task = new JLabel(game.getTask());
-		lbl_task.setBounds(390, 582, 186, 21);
-		frmPointAndDoors.getContentPane().add(lbl_task);
+		JLabel lbl_Header = new JLabel(title + " by adiko01");
+		lbl_Header.setHorizontalAlignment(SwingConstants.CENTER);
+		lbl_Header.setBounds(10, 10, 546, 21);
+		frmPointAndDoors.getContentPane().add(lbl_Header);
 		
+		JLabel lbl_P = new JLabel("P");
+		lbl_P.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lbl_P.setHorizontalAlignment(SwingConstants.CENTER);
+		lbl_P.setBounds(173, 276, 45, 45);
+		
+		aktualisieren(game , panels, lbl_task);
 	}
-	private void aktualisieren (PointsAndDoors game , JPanel[] panels) {
+	/**
+	 * Akualisiert das Spielfeld
+	 * @param game
+	 * @param panels
+	 */
+	private void aktualisieren (PointsAndDoors game , JPanel[] panels, JLabel lbl_task) {
 		//TODO make this happen
 		for (int i = 0; i < 100 ; i++) {
 			//Hintergrundfarbe der Panels
 			if (i == game.getPos(GameObjects.Player)) {
-				panels[i].setBackground(Color.RED);
+				markPanelAsPlayer(panels[i]);
+			} else if (i == game.getPos(GameObjects.Money)) {
+				markPanelAsMoney(panels[i]);
 			} else {
-				panels[i].setBackground(Color.WHITE);
+				resetPanel(panels[i]);
 			}			
 		}
+		lbl_task.setText(game.getTask());
+		
+	}
+	private void resetPanel (JPanel panel) {
+		panel.setBackground(Color.WHITE);
+	}
+	private void markPanelAsPlayer (JPanel panel) {
+		panel.setBackground(Color.RED);
+	}
+	private void markPanelAsMoney (JPanel panel) {
+		panel.setBackground(Color.YELLOW);
 	}
 }
