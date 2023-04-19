@@ -192,7 +192,7 @@ public class GAME {
 				System.out.println("Du hats die Tür gefunden!");
 				//Versuche die Klasse ConsoleArt aufzurufen
 				try {
-					PointsAndDoors.ConsoleArt.main("GEWONNEN");
+					ConsoleArt.main("GEWONNEN");
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -206,7 +206,7 @@ public class GAME {
 				System.out.println("Du hast verloren, dein Gegner war schneller als du!");
 				//Versuche die Klasse ConsoleArt aufzurufen
 				try {
-					PointsAndDoors.ConsoleArt.main("VERLOREN");
+					ConsoleArt.main("VERLOREN");
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
