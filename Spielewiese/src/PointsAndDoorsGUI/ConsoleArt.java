@@ -1,4 +1,4 @@
-package SpielAusUebungsDreiAufgabeDrei;
+package PointsAndDoorsGUI;
 
 
 import java.awt.*;
