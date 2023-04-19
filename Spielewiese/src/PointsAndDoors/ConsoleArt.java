@@ -1,4 +1,4 @@
-package PointsAndDoorsGUI;
+package PointsAndDoors;
 
 
 import java.awt.*;

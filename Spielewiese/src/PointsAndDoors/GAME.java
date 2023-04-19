@@ -1,4 +1,4 @@
-package PointsAndDoorsGUI;
+package PointsAndDoors;
 
 import java.awt.Point;
 import java.io.IOException;
@@ -192,7 +192,7 @@ public class GAME {
 				System.out.println("Du hats die Tür gefunden!");
 				//Versuche die Klasse ConsoleArt aufzurufen
 				try {
-					PointsAndDoorsGUI.ConsoleArt.main("GEWONNEN");
+					PointsAndDoors.ConsoleArt.main("GEWONNEN");
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -206,7 +206,7 @@ public class GAME {
 				System.out.println("Du hast verloren, dein Gegner war schneller als du!");
 				//Versuche die Klasse ConsoleArt aufzurufen
 				try {
-					PointsAndDoorsGUI.ConsoleArt.main("VERLOREN");
+					PointsAndDoors.ConsoleArt.main("VERLOREN");
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
