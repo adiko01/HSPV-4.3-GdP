@@ -12,9 +12,13 @@ import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
 import javax.swing.JLabel;
 import java.awt.Font;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 
 public class PointsAndDoorsGUI {
-	final String title = "PointsAndDoors - Game Version: - GUI: BETA";
+	final static String GUIversion = "BETA";
+	final String title = "PointsAndDoors - Game Version: " + PointsAndDoors.Version + " - GUI: " + GUIversion;
 	private JFrame frmPointAndDoors;
 
 	/**
@@ -69,7 +73,7 @@ public class PointsAndDoorsGUI {
 					//Festlegen der Spalte
 					int x = ((i % 10) * 50) + 30;
 					//Festlegen der Zeile
-					int y = ((i / 10) * 50) + 40;
+					int y = ((i / 10) * 50) + 50;
 							
 					//Setze die Maße des Panels
 					panels[i].setBounds(x, y, 50, 50);
@@ -124,7 +128,7 @@ public class PointsAndDoorsGUI {
 		
 		JLabel lbl_Header = new JLabel(title + " by adiko01");
 		lbl_Header.setHorizontalAlignment(SwingConstants.CENTER);
-		lbl_Header.setBounds(10, 10, 546, 21);
+		lbl_Header.setBounds(10, 21, 546, 21);
 		frmPointAndDoors.getContentPane().add(lbl_Header);
 		
 		JLabel lbl_P = new JLabel("P");
@@ -133,6 +137,30 @@ public class PointsAndDoorsGUI {
 		lbl_P.setBounds(173, 276, 45, 45);
 		
 		aktualisieren(game , panels, lbl_task);
+		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 556, 22);
+		frmPointAndDoors.getContentPane().add(menuBar);
+		
+		JMenuItem barItem_About = new JMenuItem("About");
+		barItem_About.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null,
+						"PointsAndDoors - by adiko01\n"
+								+ "Game Version: " + PointsAndDoors.Version + "\n"
+								+ "GUI Version: " + GUIversion + "\n"
+								+ "GitHub: adiko01/HSPV-4.3-GdP");
+			}
+		});
+		
+		JMenuItem mntm_Exit = new JMenuItem("Beenden");
+		mntm_Exit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		menuBar.add(mntm_Exit);
+		menuBar.add(barItem_About);
 	}
 	/**
 	 * Akualisiert das Spielfeld
@@ -166,7 +194,6 @@ public class PointsAndDoorsGUI {
 			} else {
 				WinnMessage = "Der Gegener hat <br> leider gewonnen!";
 			}
-			//TODO Lösche den Screen und zeige Meldung
 			for (JPanel panel : panels) {
 				// Entferne die Panels
 				panel.hide();
