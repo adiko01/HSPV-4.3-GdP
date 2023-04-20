@@ -8,9 +8,9 @@ import javax.swing.JPanel;
 
 public class Kran extends JPanel {
 	// Konstanten
-	private final static int MAX_AUSLEGER = 1000;
-	private final static int MAX_HAKEN = 1000;
-	private final static int MAX_KRAN_POS = 410;
+	private final static int MAX_AUSLEGER = 500;
+	private final static int MAX_HAKEN = 500;
+	private final static int MAX_KRAN_POS = 500;
 	
 	// JPanels
 	JPanel Boden;		//Kranboden
@@ -108,7 +108,7 @@ public class Kran extends JPanel {
 	 * @param menge Positiv->Ausfahren Negativ->Einfahren
 	 */
 	public void Ausleger (int menge) {
-		if (Ausleger.getLocation().x + menge < MAX_AUSLEGER && Ausleger.getLocation().x < Hoehe.getLocation().x) {
+		if (Ausleger.getLocation().x + menge < MAX_AUSLEGER && Ausleger.getLocation().x + menge < Hoehe.getLocation().x) {
 			Point pos = Ausleger.getLocation();
 			pos.x = pos.x - menge;
 			Ausleger.setLocation(pos);
