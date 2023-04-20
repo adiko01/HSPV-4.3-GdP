@@ -162,14 +162,19 @@ public class PointsAndDoorsGUI {
 		} else {
 			String WinnMessage = "";
 			if (game.getStatus() == GameStatus.PlayerWins) {
-				WinnMessage = "Herzlichen glückwunsch, du hast gewonnen!";
+				WinnMessage = "Herzlichen glückwunsch,<br> du hast gewonnen!";
 			} else {
-				WinnMessage = "Der Gegener hat leider gewonnen!";
+				WinnMessage = "Der Gegener hat <br> leider gewonnen!";
 			}
 			//TODO Lösche den Screen und zeige Meldung
 			for (JPanel panel : panels) {
 				// Entferne die Panels
 				panel.hide();
+				JLabel lbl_WinnMessage = new JLabel("<html><body><center>" + WinnMessage + "</center></body></html>");
+				lbl_WinnMessage.setFont(new Font("Tahoma", Font.BOLD, 35));
+				lbl_WinnMessage.setHorizontalAlignment(SwingConstants.CENTER);
+				lbl_WinnMessage.setBounds(22, 87, 501, 305);
+				frmPointAndDoors.getContentPane().add(lbl_WinnMessage);
 			}
 			
 		}
