@@ -1,6 +1,7 @@
 package aufgaben.Aufgabe27;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Point;
 
 import javax.swing.JPanel;
@@ -60,14 +61,24 @@ public class Kran extends JPanel {
 		panels[3] = Haken;
 	}
 	
+	/**
+	 * Bewegt den Kran um 10 Einheiten nach Rechts
+	 */
 	public void rechts() {
 		moveKran(10);
 	}
 	
+	/**
+	 * Bewegt den Kran um 10 Einheiten nach Links
+	 */
 	public void links() {
 		moveKran(-10);
 	}
 	
+	/**
+	 * Bewegt den Kran um {@code menge} nach rechts
+	 * @param menge Positiv->Rechts Negativ->Links
+	 */
 	public void moveKran (int menge) {
 		if (Boden.getLocation().x + menge < MAX_KRAN_POS && Haken.getLocation().x + menge > 10) {
 			for (JPanel panel : panels) {
@@ -75,6 +86,39 @@ public class Kran extends JPanel {
 				pos.x = pos.x + menge;
 				panel.setLocation(pos);
 			}
+		}
+	}
+	
+	/**
+	 * Ausleger um 10 Einheiten Ausfahren
+	 */
+	public void AuslegerAusfahren () {
+		Ausleger(10);
+	}
+	
+	/**
+	 * Ausleger um 10 Einheiten Einfahren
+	 */
+	public void AuslegerEinfahren () {
+		Ausleger(-10);
+	}
+	
+	/**
+	 * Ausleger Ausfahren
+	 * @param menge Positiv->Ausfahren Negativ->Einfahren
+	 */
+	public void Ausleger (int menge) {
+		if (Ausleger.getLocation().x + menge < MAX_AUSLEGER && Ausleger.getLocation().x < Hoehe.getLocation().x) {
+			Point pos = Ausleger.getLocation();
+			pos.x = pos.x - menge;
+			Ausleger.setLocation(pos);
+			Dimension d = Ausleger.getSize();
+			d.width = d.width + menge;
+			Ausleger.setSize(d);
+			
+			pos = Haken.getLocation();
+			pos.x = pos.x - menge;
+			Haken.setLocation(pos);
 		}
 	}
 }

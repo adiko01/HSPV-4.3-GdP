@@ -71,13 +71,13 @@ public class Aufgabe27 extends JFrame{
 		
 		btn_AuslegerAusfahren.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//TODO MachWat
+				kran.AuslegerAusfahren();
 			}
 		});
 		
 		btn_AuslegerEinfahren.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//TODO MachWat
+				kran.AuslegerEinfahren();
 			}
 		});
 		
