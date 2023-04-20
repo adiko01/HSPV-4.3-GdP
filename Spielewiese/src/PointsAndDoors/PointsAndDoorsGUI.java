@@ -186,7 +186,15 @@ public class PointsAndDoorsGUI {
 				}			
 			}
 		} else if (game.getStatus() == GameStatus.ERROR) {
-			//TODO Make this Happen
+			for (JPanel panel : panels) {
+				// Entferne die Panels
+				panel.hide();
+			}
+			JLabel lbl_ERROR = new JLabel("ERROR");
+			lbl_ERROR.setFont(new Font("Tahoma", Font.BOLD, 50));
+			lbl_ERROR.setHorizontalAlignment(SwingConstants.CENTER);
+			lbl_ERROR.setBounds(22, 87, 501, 305);
+			frmPointAndDoors.getContentPane().add(lbl_ERROR);
 		} else {
 			String WinnMessage = "";
 			if (game.getStatus() == GameStatus.PlayerWins) {
@@ -197,14 +205,14 @@ public class PointsAndDoorsGUI {
 			for (JPanel panel : panels) {
 				// Entferne die Panels
 				panel.hide();
-				JLabel lbl_WinnMessage = new JLabel("<html><body><center>" + WinnMessage + "</center></body></html>");
-				lbl_WinnMessage.setFont(new Font("Tahoma", Font.BOLD, 35));
-				lbl_WinnMessage.setHorizontalAlignment(SwingConstants.CENTER);
-				lbl_WinnMessage.setBounds(22, 87, 501, 305);
-				frmPointAndDoors.getContentPane().add(lbl_WinnMessage);
 			}
-			
+			JLabel lbl_WinnMessage = new JLabel("<html><body><center>" + WinnMessage + "</center></body></html>");
+			lbl_WinnMessage.setFont(new Font("Tahoma", Font.BOLD, 35));
+			lbl_WinnMessage.setHorizontalAlignment(SwingConstants.CENTER);
+			lbl_WinnMessage.setBounds(22, 87, 501, 305);
+			frmPointAndDoors.getContentPane().add(lbl_WinnMessage);
 		}
+		//Aktualisiere TASK
 		lbl_task.setText(game.getTask());
 	}
 	private void resetPanel (JPanel panel) {
