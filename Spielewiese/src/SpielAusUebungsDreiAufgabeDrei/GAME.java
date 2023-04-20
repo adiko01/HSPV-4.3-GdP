@@ -191,11 +191,7 @@ public class GAME {
 			} else if (player.equals(door) && moneyFound) {
 				System.out.println("Du hats die Tür gefunden!");
 				//Versuche die Klasse ConsoleArt aufzurufen
-				try {
-					ConsoleArt.main("GEWONNEN");
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+				ConsoleArt.main("GEWONNEN");
 				end = true;
 			} else if (player.equals(door)) {
 				System.out.println("Du musst erst das Geld aufsammeln um durch die Tür zu gehen!");
@@ -205,11 +201,7 @@ public class GAME {
 			} else if (enemy.equals(door) && moneyFound) {
 				System.out.println("Du hast verloren, dein Gegner war schneller als du!");
 				//Versuche die Klasse ConsoleArt aufzurufen
-				try {
-					ConsoleArt.main("VERLOREN");
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+				ConsoleArt.main("VERLOREN");
 				end = true;
 			}
 		} while (!end);
