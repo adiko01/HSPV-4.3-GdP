@@ -3,16 +3,14 @@ package SpielAusUebungsDreiAufgabeDrei;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 
 public class ConsoleArt {
 
-    public static void main(String TEXT) throws IOException {
+    public static void main(String TEXT) {
 
         int width = 151;
         int height = 30;
 
-        //BufferedImage image = ImageIO.read(new File("/Users/mkyong/Desktop/logo.jpg"));
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         Graphics g = image.getGraphics();
         g.setFont(new Font("SansSerif", Font.BOLD, 18));
