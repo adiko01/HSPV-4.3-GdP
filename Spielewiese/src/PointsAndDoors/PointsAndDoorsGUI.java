@@ -141,22 +141,34 @@ public class PointsAndDoorsGUI {
 	 */
 	private void aktualisieren (PointsAndDoors game , JPanel[] panels, JLabel lbl_task) {
 		//TODO make this happen
-		for (int i = 0; i < 100 ; i++) {
-			//Hintergrundfarbe der Panels
-			if (i == game.getPos(GameObjects.Player)) {
-				markPanelAsPlayer(panels[i]);
-			} else if (i == game.getPos(GameObjects.Money)) {
-				markPanelAsMoney(panels[i]);
-			} else if (i == game.getPos(GameObjects.Door)) {
-				markPanelAsDoor(panels[i]);
-			} else if (i == game.getPos(GameObjects.Enemy)) {
-				markPanelAsEnemy(panels[i]);
-			} else {
-				resetPanel(panels[i]);
-			}			
-		}
-		lbl_task.setText(game.getTask());
 		
+		if (game.getStatus() == GameStatus.RUN) {
+			for (int i = 0; i < 100 ; i++) {
+				//Hintergrundfarbe der Panels
+				if (i == game.getPos(GameObjects.Player)) {
+					markPanelAsPlayer(panels[i]);
+				} else if (i == game.getPos(GameObjects.Money)) {
+					markPanelAsMoney(panels[i]);
+				} else if (i == game.getPos(GameObjects.Door)) {
+					markPanelAsDoor(panels[i]);
+				} else if (i == game.getPos(GameObjects.Enemy)) {
+					markPanelAsEnemy(panels[i]);
+				} else {
+					resetPanel(panels[i]);
+				}			
+			}
+			lbl_task.setText(game.getTask());
+		} else if (game.getStatus() == GameStatus.ERROR) {
+			//TODO Make this Happen
+		} else {
+			String WinnMessage = "";
+			if (game.getStatus() == GameStatus.PlayerWins) {
+				WinnMessage = "Herzlichen glückwunsch, du hast gewonnen!";
+			} else {
+				WinnMessage = "Der Gegener hat leider gewonnen!";
+			}
+			//TODO Lösche den Screen und zeige Meldung
+		}
 	}
 	private void resetPanel (JPanel panel) {
 		panel.setBackground(Color.WHITE);
