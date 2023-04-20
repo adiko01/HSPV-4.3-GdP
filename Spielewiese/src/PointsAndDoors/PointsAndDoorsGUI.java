@@ -157,7 +157,6 @@ public class PointsAndDoorsGUI {
 					resetPanel(panels[i]);
 				}			
 			}
-			lbl_task.setText(game.getTask());
 		} else if (game.getStatus() == GameStatus.ERROR) {
 			//TODO Make this Happen
 		} else {
@@ -168,7 +167,13 @@ public class PointsAndDoorsGUI {
 				WinnMessage = "Der Gegener hat leider gewonnen!";
 			}
 			//TODO Lösche den Screen und zeige Meldung
+			for (JPanel panel : panels) {
+				// Entferne die Panels
+				panel.hide();
+			}
+			
 		}
+		lbl_task.setText(game.getTask());
 	}
 	private void resetPanel (JPanel panel) {
 		panel.setBackground(Color.WHITE);
