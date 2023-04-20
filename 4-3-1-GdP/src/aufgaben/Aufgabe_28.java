@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+@SuppressWarnings("serial")
 public class Aufgabe_28 extends JFrame {
 	/*	Aufgabe 28:
 	 * Erstellen Sie ein Fenster, in dem mittels des GridLayout 20 rote Panels in
