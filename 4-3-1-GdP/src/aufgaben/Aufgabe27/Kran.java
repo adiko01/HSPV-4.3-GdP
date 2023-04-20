@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 public class Kran extends JPanel {
 	// Konstanten
 	private final static int MAX_AUSLEGER = 1000;
-	private final static int MAX_HARKEN = 1000;
+	private final static int MAX_HAKEN = 1000;
 	private final static int MAX_KRAN_POS = 410;
 	
 	// JPanels
@@ -23,7 +23,7 @@ public class Kran extends JPanel {
 	
 	Kran() {
 		this.setLayout(null);
-		this.setBackground(Color.BLUE); //TODO Mache Schwarz
+		this.setBackground(Color.BLACK);
 		
 		
 		//Kran Boden
@@ -119,6 +119,32 @@ public class Kran extends JPanel {
 			pos = Haken.getLocation();
 			pos.x = pos.x - menge;
 			Haken.setLocation(pos);
+		}
+	}
+	
+	/**
+	 * Fährt den Haken 10 Einheiten aus
+	 */
+	public void HakenAusfahren () {
+		Haken(10);
+	}
+	
+	/**
+	 * Fährt den Haken 10 Einheiten ein
+	 */
+	public void HakenEinfahren () {
+		Haken(-10);
+	}
+	
+	/**
+	 * Fährt den Haken
+	 * @param menge Positiv->Ausfahren Negativ->Einfahren
+	 */
+	public void Haken (int menge) {
+		if (Haken.getSize().height + menge < MAX_HAKEN && Haken.getSize().height + menge > 50 ) {
+			Dimension d = Haken.getSize();
+			d.height = d.height + menge;
+			Haken.setSize(d);
 		}
 	}
 }

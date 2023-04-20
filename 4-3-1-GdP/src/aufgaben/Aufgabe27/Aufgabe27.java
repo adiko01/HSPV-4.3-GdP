@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Aufgabe27 extends JFrame{
@@ -19,6 +20,12 @@ public class Aufgabe27 extends JFrame{
 		hintergrund.setBackground(Color.BLACK);
 		hintergrund.setLayout(null);
 		this.add(hintergrund);
+		
+		// JLabel mit Hinweis Text
+		JLabel lbl_info = new JLabel("<html><body><center>Aufgabe 27<br>by Adrian Kolar<br>MS I 22/01</center></body></html>");
+		lbl_info.setBounds(400, 10, 100, 100);
+		lbl_info.setForeground(new Color(255, 255, 255));
+		hintergrund.add(lbl_info);
 		
 		// Erstelle Buttons
 		JButton btn_HarkenAusfahren = new JButton("Harken ausfahren");
@@ -59,13 +66,13 @@ public class Aufgabe27 extends JFrame{
 		//Erstelle Button Funktionen
 		btn_HarkenAusfahren.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//TODO MachWat
+				kran.HakenAusfahren();
 			}
 		});
 		
 		btn_HarkenEinfahren.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//TODO MachWat
+				kran.HakenEinfahren();
 			}
 		});
 		
