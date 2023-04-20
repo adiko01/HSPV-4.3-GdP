@@ -12,6 +12,9 @@ public class PointsAndDoors {
 	private Point door = new Point();
 	private Point money = new Point();
 	
+	// Spiel Status
+	private GameStatus status;
+	
 	PointsAndDoors() {
 		// Variablen
 		Task = "Sammele das Geldstück auf.";
@@ -24,6 +27,9 @@ public class PointsAndDoors {
 		door.y = (int) (Math.random() * 10 + 1);
 		money.x = (int) (Math.random() * 10 + 1);
 		money.y = (int) (Math.random() * 10 + 1);
+		
+		//Spiel Status
+		status = GameStatus.RUN;
 	}
 	
 	
@@ -47,6 +53,9 @@ public class PointsAndDoors {
 		if (player.equals(money)) {
 			money.move(-1, -1);
 			Task = "Gehe zur Tür";
+		} else if (player.equals(door) && moneyFound()) {
+			Task = "Du hast Gewonnen";
+			status = GameStatus.PlayerWins;
 		}
 		
 		// Bewege Gegner
@@ -91,6 +100,9 @@ public class PointsAndDoors {
 		if (enemy.equals(money)) {
 			money.move(-1, -1);
 			Task = "Gehe zur Tür";
+		} else if (enemy.equals(door) && moneyFound()) {
+			Task = "Der Gegner hat Gewonnen";
+			status = GameStatus.EnemyWins;
 		}
 	}
 	
@@ -104,6 +116,14 @@ public class PointsAndDoors {
 		return false;
 	}
 	
+	/**
+	 * Bewegt den Spieler
+	 * @param c
+	 * 			u - nach oben
+	 * 			d - nach unten
+	 * 			l - nach links
+	 * 			r - nach rechts
+	 */
 	public void movePlayer (char c) {
 		int dX = 0, dY = 0;
 		if (c=='u') {
@@ -127,6 +147,10 @@ public class PointsAndDoors {
 			player.translate(dX, dY);
 			gameLogic();
 		}
+	}
+	
+	public GameStatus getStatus () {
+		return status;
 	}
 	
 	/**
