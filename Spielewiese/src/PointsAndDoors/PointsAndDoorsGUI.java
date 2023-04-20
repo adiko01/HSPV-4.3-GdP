@@ -147,6 +147,10 @@ public class PointsAndDoorsGUI {
 				markPanelAsPlayer(panels[i]);
 			} else if (i == game.getPos(GameObjects.Money)) {
 				markPanelAsMoney(panels[i]);
+			} else if (i == game.getPos(GameObjects.Door)) {
+				markPanelAsDoor(panels[i]);
+			} else if (i == game.getPos(GameObjects.Enemy)) {
+				markPanelAsEnemy(panels[i]);
 			} else {
 				resetPanel(panels[i]);
 			}			
@@ -162,5 +166,11 @@ public class PointsAndDoorsGUI {
 	}
 	private void markPanelAsMoney (JPanel panel) {
 		panel.setBackground(Color.YELLOW);
+	}
+	private void markPanelAsDoor (JPanel panel) {
+		panel.setBackground(new Color(139, 0, 0));
+	}
+	private void markPanelAsEnemy (JPanel panel) {
+		panel.setBackground(new Color(255, 0, 255));
 	}
 }
