@@ -11,5 +11,5 @@ MS I 22/01
 | 4-3-1-GdP | Eigene Lösungen von Aufgaben aus dem Modul |
 | 4-3-1-wambach | Beispiele und Lösungen von Prof. Dr. Tim Wambach |
 | 4-3-2-Uebung | Eigene Lösungen zu den Aufgaben aus den Übungen |
-| eclipse-basics | Ein Sammelsorium an kleinen Anleitungen für die verwendung von eclipse [README.md](eclipse-basics/README.md) |
+| eclipse-basics | Ein Sammelsorium an kleinen Anleitungen für die Verwendung von eclipse [README.md](eclipse-basics/README.md) |
 | Spielwiese | Ein Sammelsorium an eigenen Projekten basierend auf den Aufgaben |
