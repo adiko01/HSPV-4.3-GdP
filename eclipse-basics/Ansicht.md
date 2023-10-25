@@ -10,7 +10,7 @@
 4. Die Einstellung muss nun mittels `Apply and Close` bestätigt werden *(Magenta Pfeil auf dem Bild unten)*.
 5. eclipse stellt die Änderrungen zwar sofort dar, sollte aber am besten einmal neugestartet werden.
 
-![](/Bilder/Ansicht/Preferences-Appearance.png)
+![](Bilder/Ansicht/Preferences-Appearance.png)
 
 ### Der Darkmode von DevStyle
 1. Im Menü `Help` der oberen Menüleiste `Eclipse Marketplace . . .` auswählen.
@@ -23,7 +23,7 @@
 8. Es kommt eine Windows Defender Meldung von Eclipse. (Dieser Schritt ist Optional `Fix Automatically` und bestätigen)
 9. Nachd er Anleitung [oben](Ansicht.md#der-standard-darkmode-von-eclipse) das neue Theme aktivieren. 
 
-![](/Bilder/Ansicht/Marketplace-Darkest-Dark.jpg)
+![](Bilder/Ansicht/Marketplace-Darkest-Dark.jpg)
 
 ## Perspektive
 
