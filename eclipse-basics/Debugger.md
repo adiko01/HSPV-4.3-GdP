@@ -1,6 +1,6 @@
 # Eclipse Debugger
 ## Aufbau des Fensters
-![](/Bilder/Debugger/Debugger-Ansicht_Edit.jpg)
+![](Bilder/Debugger/Debugger-Ansicht_Edit.jpg)
 Das Debugger Fenster ist in mehre Bereiche geteilt.
 
 Im magentafarben Bereich sind die Steuerfunktionen des Debuggers.
